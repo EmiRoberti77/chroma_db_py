@@ -17,4 +17,7 @@ results = collection.query(
     n_results=2
 )
 
-print(results)
+for idx, document in enumerate(results['documents'][0]):
+    doc_id = results['ids'][0][idx]
+    distance = results['distances'][0][idx]
+    print(f"for the query:{query_text},\nFound similar document:{document} distance:{distance} doc_id:{doc_id}")
