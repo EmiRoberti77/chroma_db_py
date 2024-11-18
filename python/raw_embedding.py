@@ -10,4 +10,4 @@ response = client.embeddings.create(
     input="this is my code and this line will be embedded", 
     model="text-embedding-3-small")
 
-print(response)
+print(response.data[0].embedding)
