@@ -1,4 +1,4 @@
-Building a Local Knowledge Retrieval System with Chroma DB and OpenAI Embeddings
+# Building a Local Knowledge Retrieval System with Chroma DB and OpenAI Embeddings
 
 AI-driven solutions has revolutionized how we process, store, and query unstructured data. This article delves into a robust setup for creating a local knowledge retrieval system using Chroma DB for local vector storage and OpenAI Embeddings to transform textual data into semantic vectors. Below, we explore the key benefits, concepts, and the magic behind vector similarity.
 
