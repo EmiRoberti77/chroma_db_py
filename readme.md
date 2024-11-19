@@ -1,5 +1,9 @@
 # Building a Local Knowledge Retrieval System with Chroma DB and OpenAI Embeddings
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/54a6584f-da5b-48cc-a676-43e9523a759f" alt="vector" width="600" height="400">
+</div>
+
 AI-driven solutions has revolutionized how we process, store, and query unstructured data. This article delves into a robust setup for creating a local knowledge retrieval system using Chroma DB for local vector storage and OpenAI Embeddings to transform textual data into semantic vectors. Below, we explore the key benefits, concepts, and the magic behind vector similarity.
 
 Key Concepts
@@ -94,8 +98,6 @@ Real-World Applications
     4.	Knowledge Management
     •	Create an internal knowledge base for employees, enabling quick access to relevant resources.
 
-Conclusion
-
 Chroma DB for local vector storage and OpenAI Embeddings for semantic understanding, you can build an efficient, privacy-conscious knowledge retrieval system. Whether you’re working on document analysis, enterprise search, or personalized content delivery, this combination provides a scalable and powerful foundation.
 
-With the growing need for intelligent systems that can interpret and process data contextually, understanding the core concepts of embeddings and vector distances is crucial for building the next generation of AI-driven applications.
+Happy coding - Emi Roberti 
