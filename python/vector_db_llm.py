@@ -61,7 +61,7 @@ for doc in chunked_documents:
 
 # Upsert documents with embeddings into Chroma
 for doc in chunked_documents:
-    print("==== Inserting chunks into db;;; ====")
+    print("==== Inserting chunks into db ====")
     collection.upsert(
         ids=[doc["id"]], documents=[doc["text"]], embeddings=[doc["embedding"]]
     )
