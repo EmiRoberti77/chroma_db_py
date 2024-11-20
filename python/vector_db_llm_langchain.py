@@ -46,6 +46,8 @@ vectordb = Chroma.from_documents(
 
 retriever = vectordb.as_retriever()
 
+# to get the chain to work with the database we created the prompt
+# with the {context to be passed in}
 system_prompt = (
     "You are an assistant for question-answering tasks. "
     "Use the following pieces of retrieved context to answer "
@@ -63,17 +65,24 @@ human_message = HumanMessagePromptTemplate.from_template("{input}")
 # Create the chat prompt template
 prompt = ChatPromptTemplate(messages=[system_message, human_message])
 
+# this is where we prepare the tools to be able to ask the question and to assign a 
+# LLM to resolve the text that has been found
 question_answer_chain = create_stuff_documents_chain(
     llm=model,
     prompt=prompt
 )
 
+# this is where the magic happenes, we have a retrieval chain, we pass in the retriver from Chroma 
+# and the quetion_answer_chain, this will resolve the query reading the relevant documents
+# and passing them to the LLM to create a logical response
 rag_chain = create_retrieval_chain(retriever, question_answer_chain)
 
+#the chain is ready and can be invoked
 response = rag_chain.invoke({
     "input":"talk about databricks news"
 })
 
+# extract the answer from the JSON output
 res = response["answer"]
 
 print(res)
