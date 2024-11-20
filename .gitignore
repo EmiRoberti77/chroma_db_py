@@ -1,5 +1,6 @@
 myenv
 node_modules
 chroma_persist
+chroma_db_emi_sample
 .env
 chroma_persistent_storage
